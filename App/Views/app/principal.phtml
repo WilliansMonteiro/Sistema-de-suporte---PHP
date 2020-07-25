@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/iconehead.png">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--HTML5Shiv-->
+	<style type="text/css">
+		.team{
+			font-family: 'Roboto', sans-serif;;
+			font-size: 16px;
+			font-weight: 400;
+			color: #777;
+			margin: 0;
+			padding: 0;
+		}
+		.teamH1{
+			font-size: 36px;
+			color: #555;
+			font-weight: bold;
+		}
+		.teamH3{
+			font-size: 24px;
+			color: #333;
+			font-weight: bold;
+		}
+		#team img{
+			margin-top: -50px;
+		}
+		#team i{
+			font-size: 25px;
+			color: #555;
+		}
+		#team p {
+			font-weight: 500;
+		}
+		#team .card{
+			border-radius: 0;
+			box-shadow: 5px 5px 15px #7CCD7C;
+			transition: all 0.3s ease-in;
+			-webkit-transition: all 0.3s ease-in;
+			-moz-transition: all 0.3s ease-in;  
+		}
+
+		#team .card:hover{
+			background: #7CCD7C;
+			color: black;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 5px 5px 10px #7CCD7C;
+		}
+
+		#team .card:hover h3, #team .card:hover i{
+			color: black;
+		}
+		nav.navbar-transparente {
+			padding: 15px 0px;
+			background: rgba(0,0,0,10);
+		}
+
+		.navbar-light .navbar-nav .nav-link {
+			color: white;
+		}
+
+		.navbar-light .navbar-nav .nav-link:hover {
+			color: #9bf0e1;
+		}
+
+		.navbar-light .navbar-toggler {
+			color: rgba(255,255,255,.1);
+			border-color: white;
+		}
+
+		.divisor{
+			width: 1px;
+			background: white;
+			margin: 12px 15px;
+		}
+
+
+		.tituloimagem{
+			font-family: 'Oswald', sans-serif;
+			color: #fff;
+			font-size: 343.75%;
+			line-height: 1.5;
+			text-align: center;
+			font-weight: 600;
+		}
+		.subtituloimagem{
+			font-family: 'Oswald', sans-serif;
+			color: #fff;
+			font-size: 162.5%;
+			text-align: center;
+			font-weight: 300;
+		}
+
+		.section2{
+			background: #e8e8e8
+		}
+
+		.titulo1{
+			font-family: 'Oswald', sans-serif;
+			text-transform: uppercase;
+			font-weight: 300px;
+			color: #474747;
+			font-size: 2.6em;
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		.subtitulo1{
+			font-family: 'Roboto', sans-serif;
+			font-weight: 300px;
+			font-size: 22px;
+			font-size: 1.6em
+			color: #636363;
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		.titulo2{
+			font-family: 'Oswald', sans-serif;
+			text-transform: uppercase;
+			font-weight: 300px;
+			color: #474747;
+			font-size: 1.6em;
+			margin-top: 150px;
+			text-align: center;
+
+		}
+
+		.parceiros{
+			font-family: 'Oswald', sans-serif;
+			text-transform: uppercase;
+			font-weight: 300px;
+			color: #474747;
+			font-size: 1.6em;
+			text-align: center;
+		}
+
+		.subtitulo2{
+			font-style: italic;
+			font-family: 'Roboto', sans-serif;
+			font-size: 13px;
+			color: #636363;
+			font-weight: 300;
+			text-align: center;
+			margin-top: 15px;
+
+		}
+		.centro{
+
+			width: 50px;
+
+
+		}
+
+		.titulo3{
+			font-family: 'Oswald', sans-serif;
+			text-transform: uppercase;
+			font-weight: 300;
+			color: #474747;
+			font-size: 36px;
+			margin-top: 50px;
+			text-align: center;
+
+		}
+
+		.subtitulo3{
+			font-style: italic;
+			font-family: 'Roboto', sans-serif;
+			color: #636363;
+			margin-top: 30px;
+			text-align: center;
+
+		}
+		.paragrafo{
+			display: none;
+		}
+		@keyframes animacao-texto{
+			from{
+				left: 500px;
+
+			}
+			to{
+				left: 0px;
+			}
+
+		}
+
+		#exibir{
+			position: relative;
+			animation-name: animacao-texto;
+			animation-duration: 3s;
+		}
+
+
+		.textooculto{
+			font-family: 'Roboto', sans-serif;
+			font-size: 16px;
+			color: #636363;
+			line-height: 1.6em;
+			padding-top: 50px;
+		}
+		.titulooculto{
+			font-family: 'Muli', 'Helvetica Neue', 'Arial', sans-serif;
+			font-weight: 700px;
+			color: #636363;
+			padding-top: 40px;
+
+		}
+
+		footer {
+			background: #000;
+			padding: 50px 0px 20px 0px;
+			position: relative;
+		}
+
+		footer h4 {
+			color: #919496;
+			font-size: 0.8em;
+			text-transform: uppercase;
+		}
+
+		footer .navbar-nav a {
+			color: white;
+			font-size: 0.8em;
+		}
+
+		footer .navbar-nav a:hover{
+			color: #9bf0e1;
+			text-decoration: none;
+		}
+
+		footer p {
+			color: white;
+			font-size: 0.8em;
+		}
+
+		footer ul {
+			list-style: none;
+		}
+
+		footer ul li {
+			float: right;
+			margin: 0 5px;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<header>
+		<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+			<div class="container">
+				<a href="#" class="navbar-brand">
+					<span style="color: white; font-weight: 300; font-family: 'Roboto', sans-serif;"><img src="img/networking.svg" style="width: 50px;">Willians Solutions</span>
+				</a>
+				<button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+					<i class="fas fa-bars text-white"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="nav-principal">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a href="/principal" class="nav-link">Software</a>
+						</li>
+						<li class="nav-item">
+							<a href="/principal" class="nav-link">Hardware</a>
+						</li>
+						<li class="nav-item" >
+							<a href="/principal" class="nav-link">Rede</a>
+						</li>
+						<li class="nav-item divisor">
+
+						</li>
+						<li class="nav-item">
+							<a href="/clienteLogin"  class="nav-link">Entrar</a>
+						</li>
+					</ul>
+				</div>
+
+
+
+
+
+
+			</div>
+			
+		</nav>
+
+
+
+
+	</header>
+
+	<div id="carousel-controles" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="img/Webdesign1.jpg" class="img-fluid">
+				<div class="carousel-caption">
+					<h3 class="tituloimagem">Resolvemos os seus problemas</h3>
+					<span class="subtituloimagem">Realizamos ajustes e criamos sites do zero para o seu estabelecimento</span>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="img/Webdesign2.jpg" class="img-fluid">
+				<div class="carousel-caption">
+					<h3 class="tituloimagem">Manutenção de Computadores</h3>
+					<span class="subtituloimagem">Equipes especializadas para garantir a alta performance do seu dispositivo</span> 
+					
+
+				</div>
+			</div>
+		</div>
+		<a href="#carousel-controles" class="carousel-control-prev" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+
+		<a href="#carousel-controles" class="carousel-control-next" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
+	</div>
+
+	<div class="section2">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="titulo1" style="padding-top: 35px;">Solutions</h1>
+					<h4 class="subtitulo1" style="padding-top: 35px;">Conheça os serviços oferecidos pela Willians solutions</h4>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4">
+
+
+					<h4 class="titulo2"><span><img src="img/seguranca.svg" class="centro"></span>Suporte Técnico</h4>
+					<p class="subtitulo2">Garantimos todo o tipo de suporte técnico necessário para o seu ambiente. Hardware, software rede e muito mais.</p>
+
+				</div>
+
+				<div class="col-sm-4">
+					<h4 class="titulo2"><span><img src="img/base-de-dados.svg" class="centro"></span>Backup de dados</h4>
+					<p class="subtitulo2">Quando acidentes ocorretem no seu dispositivo, garantiremos que você recupere seus dados de forma eficiente e segura.</p>
+				</div>
+
+				<div class="col-sm-4">
+					<h4 class="titulo2"><span><img src="img/rede.svg" class="centro"></span>Rede e internet</h4>
+					<p class="subtitulo2">Fazemos reparo na sua rede local, melhorando o ambiente e tráfego de suas informações.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<h4 class="titulo2"><span><img src="img/networking.svg" class="centro"></span> Manutenção</h4>
+					<p class="subtitulo2">
+						Fazemos a manutenção do seu dispositivo, Computadores, Notebooks, Celulares e até mesmo consoles de ultima geração!
+					</p>
+
+				</div>
+				<div class="col-sm-4">
+					<h4 class="titulo2"><span><img src="img/compartilhamento-de-dados.svg" class="centro"></span>Software</h4>
+					<p class="subtitulo2">
+						Trabalhamos no desenvolvimento do software do seu estabelecimento, por um preço extremamente acessível.
+					</p>
+
+				</div>
+				<div class="col-sm-4">
+					<h4 class="titulo2"><span><img src="img/comercio-eletronico.svg" class="centro"></span>Formatação</h4>
+					<p class="subtitulo2">
+						Tenha seu hardware leve e eficiente, como nos seus primeiros dias de uso. Não perca as ofertas da nossa empresa
+					</p>
+
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<div class="section3" style="background-color: white;">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="titulo3">Nós somos a Willians Solutions</h1>
+					<h5 class="subtitulo3">Uma empresa com a especialidade de melhorar sua vida no mundo da tecnologia da informação, a Willians Solucions Inc. oferece a experiência de técnicos de informatica para prestação de serviços e soluções tecnológicas.</h5>
+					<h5 class="subtitulo3">Em busca da excelência, a Willians Solution Inc avalia as melhores e mais inovadoras soluções de forma personalizada às necessidades de seus clientes, formando parcerias com os principais fabricantes do mercado e demais parceiros estratégicos.</h5>
+
+					<p style="text-align: center; padding-top: 50px;"> <button id="botao" class="btn btn-custom btn-verde" style="margin: 0 auto;">Sobre nós</button> </p>
+					
+				</div>				
+
+			</div>
+			<div class="row paragrafo movimento" id="exibir">
+				<div class="col-md-8">
+					<h3 class="titulooculto"><b>
+						Nós somos a Willians Solutions, Há 5 anos encontrando soluções para melhorar a sua vida tecnológica.
+					</b></h3>
+					<p class="textooculto">Sempre em busca da alta performance, a Willians Solution avalia as melhores e mais inovadoras soluções buscando atender da melhor forma as solicitações de seus clientes, formando um time ativo com os principais fabricantes do mercado e alguns parceiros estratégicos.</p>
+					<p class="textooculto">Possuimos diversos serviços, dentre os principais destacam-se Suporte de TI, consultoria de TI, manutenção de computadores, Reparos em redes de computadores, Desenvolvimento de sistema(Web e mobile), backup, segurança da informação). Além disso, oferecemos aos nossos clientes o mais rapido atendimento tecnico do mercado, nossos funcionarios estarão em seu estabelecimento para prestarem o nosso serviço dentro de 48 horas após a sua solicitação.</p>
+				</div>
+				<div class="col-md-4">
+					<p><img src="img/img-empresa.png"></p>
+				</div>
+			</div>
+
+			<div id="team" class="team">
+				
+				<div class="container my-3 py-5 text-center">
+					<div class="row mb-5">
+						<div class="col">
+							<h1 class="teamH1">Sócios da empresa</h1>
+							<p class="mt-3">Conheça os sócios da Willians Solutions. Com a colaboração deles crescemos a cada dia, para oferecermos um serviço mais especial para você</p>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-3 col-md-6">
+							<div class="card">
+								<div class="card-body">
+									<img src="img/eduardo.jfif" class="img-fluid rounded-circle w-50 mb-3">
+									<h3 class="teamH3">Eduardo Coelho</h3>
+									<h5>Gerente de TI</h5>
+									<p>Formado em Sistemas de informação. Eduardo é sócio e gerente da nossa empresa, nos ajudando a cada dia a prestar um serviço especial para você!</p>
+									<div class="d-flex flex-row justify-content-center">
+										<div class="p-4">                         					
+											<a href="#">
+												<i class="fab fa-facebook-f"></i>
+											</a>
+										</div>
+										<div class="p-4">
+											<a href="#">
+												<i class="fab fa-twitter"></i>
+											</a>
+										</div>
+										<div class="p-4">
+											<a href="#">
+
+												<i class="fab fa-instagram"></i>
+											</a>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-md-6">
+							<div class="card">
+								<div class="card-body">
+									<img src="img/willians.jpeg" class="img-fluid rounded-circle w-50 mb-3">
+									<h3 class="teamH3">Willians Monteiro</h3>
+									<h5>Analista de sistemas</h5>
+									<p>Formado em Análise e desenvolvimento de sistemas. Willians foi o primeiro sócio, empreendedor e incentivador da nossa organização.</p>
+									<div class="d-flex flex-row justify-content-center">
+										<div class="p-4">                         					
+											<a href="#">
+												<i class="fab fa-facebook-f"></i>
+											</a>
+										</div>
+										<div class="p-4">
+											<a href="#">
+												<i class="fab fa-twitter"></i>
+											</a>
+										</div>
+										<div class="p-4">
+											<a href="#">
+
+												<i class="fab fa-instagram"></i>
+											</a>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="card">
+								<div class="card-body">
+									<img src="img/paulo.jpg" class="img-fluid rounded-circle w-50 mb-3">
+									<h3 class="teamH3">Paulo Ricardo</h3>
+									<h5>Analista de dados</h5>
+									<p>Formado em Engenharia da computação. Paulo Ricardo foi um grande incentivador e mentor da startup willians solutions, com o apoio dele conseguimos ter o melhor atendimento do mercado</p>
+									<div class="d-flex flex-row justify-content-center">
+										<div class="p-4">                         					
+											<a href="#">
+												<i class="fab fa-facebook-f"></i>
+											</a>
+										</div>
+										<div class="p-4">
+											<a href="#">
+												<i class="fab fa-twitter"></i>
+											</a>
+										</div>
+										<div class="p-4">
+											<a href="#">
+												<i class="fab fa-instagram"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="card">
+								<div class="card-body">
+									<img src="img/halisson.jpg" class="img-fluid rounded-circle w-50 mb-3">
+									<h3 class="teamH3">Halisson Taylor</h3>
+									<h5>Analista de negócios</h5>
+									<p>Formado em ciência da computação e com certificação CGEIT. Halisson se tornou uma grande mentor para expandir a nossa marca no mercado tecnológico.</p>
+									<div class="d-flex flex-row justify-content-center">
+										<div class="p-4">                         					
+											<a href="#">
+												<i class="fab fa-facebook-f"></i>
+											</a>
+										</div>
+										<div class="p-4">
+											<a href="#">
+												<i class="fab fa-twitter"></i>
+											</a>
+										</div>
+										<div class="p-4">
+											<a href="#">
+												<i class="fab fa-instagram"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<footer>
+		<div class="container" style="padding-top: 20px;">
+			<div class="row">
+				<div class="col-md-3">
+					<span style="color: white; font-weight: 300; font-family: 'Roboto', sans-serif;"><img src="img/networking.svg" style="width: 50px;">Willians Solutions</span>
+					<p>Willians Solutions. Há 5 anos encontrando soluções para melhorar a sua vida tecnológica.</p>
+					<span style="color: green; font-weight: 300px; font-family: 'Roboto', sans-serif;"><img src="img/proteccao.svg" style="width: 50px;">Site seguro</span>
+				</div>
+				<div class="col-md-2">
+					<h4>Soluções</h4>
+					<ul class="navbar-nav">
+						<li><a href="#">Suporte</a></li>
+						<li><a href="#">Backup</a></li>
+						<li><a href="#">Rede</a></li>
+						<li><a href="#">Manutenção</a></li>
+						<li><a href="#">Software</a></li>
+						<li><a href="#">Formatação</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<h4>Contato</h4>
+					<ul class="navbar-nav">
+
+						<li><a href="#">Av. Rio de Janeiro, 209 </a></li>
+						<li><a href="#"> Rio de Janeiro/Mesquita </a></li>
+						<li><a href="#">Tel(21)979285114 </a></li>
+						<li><a href="#">Williansgomesfilho@gmail.com</a></li>		       
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul>
+						<li>
+							<a href=""><img src="img/facebook.png""></a>
+
+						</li>
+						<li>
+							<a href=""><img src="img/instagram.png""></a>
+
+						</li>
+						<li>
+							<a href=""><img src="img/twitter.png""></a>
+
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			<hr style="background: #474747;">
+			<div style="text-align: center;">
+				<span id="atual"></span>
+				- Todos os direitos reservados
+			</div>
+		</div>
+
+		
+	</footer>
+
+
+
+
+
+
+
+
+
+	
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/scriptfront.js"></script> 
+
+</body>
+</html>

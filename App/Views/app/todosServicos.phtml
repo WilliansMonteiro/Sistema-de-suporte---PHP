@@ -1,0 +1,135 @@
+
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Willians Solutions</title>
+
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<style type="text/css">
+		.card-verificar-problema {
+			padding-top: 20px;
+			font-family: Arial Narrow, sans-serif;
+			
+		}
+		.menu {
+			margin-bottom: 25px;
+		}
+
+		.app {
+			margin-top: 25px;
+		}
+
+		.pagina {
+			border:solid 1px #DFDFDF;
+			padding:25px !important;
+		}
+
+		li.list-group-item.active {
+			background-color: #fff;
+			border-color: #009933;
+			border-left:solid 10px #009933;
+		}
+
+		li a {
+			color: #212529;
+		}
+
+		li a:hover {
+			text-decoration: none;
+		}
+
+		h4 {
+			color: #009933 !important;
+		}
+	</style>
+	
+	<script type="text/javascript" src="/js/script.js"></script>
+
+
+
+</head>
+
+<body>
+	<nav class="navbar navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+				Willians Solutions
+			</a>
+		</div>
+	</nav>
+
+	<div class="container app">
+		<div class="row">
+			<div class="col-sm-3 menu">
+				<ul class="list-group">
+					<li class="list-group-item"><a href="/">Serviços pendentes</a></li>
+					<li class="list-group-item"><a href="/novoServico">Novo Serviço</a></li>
+					<li class="list-group-item active"><a href="/todosServicos">Todos os serviços</a></li>
+					<li class="list-group-item"><a href="/dadosServico">Dados dos serviços</a></li>
+				</ul>
+			</div>
+
+			<div class="col-sm-9">
+				<div class="container pagina">
+					<div class="row">
+						<div class="col-sm-12">
+							<h4>Todos os Serviços</h4>
+							<hr />																												
+						</div>					
+					</div>
+					
+					<div class="row">	
+						<?php foreach ($this->view->listar as $indice => $lista) { ?>
+							
+							
+							<div class="col-sm-9">
+								<div class="card-verificar-problema" id="servico_<?=$lista['id']?>">
+									<div class="card">
+										<div class="card-header">
+											<span>Categoria - <?=$lista['categoria']?></span>
+										</div>
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item"><span>Status - <?=$lista['status']?></span></li>
+											<li class="list-group-item"><span>Nome - <?=$lista['cliente']?> </span></li>
+											<li class="list-group-item"><span>Endereço - <?=$lista['endereco']?></span></li>
+											<li class="list-group-item"><span>Serviço - <?=$lista['servico']?></span></li>
+											<li class="list-group-item"><span>Descrição - <?=$lista['descricao']?></span></li>
+											<li class="list-group-item"><span>Valor - R$ <?=$lista['valor']?></span></li>
+											<li class="list-group-item"><span>Data - <?=$lista['data_cadastrado']?></span></li>
+										</ul>
+
+									</div>  
+
+								</div>
+								
+								
+							</div>
+
+							<div class="col-sm-3 card-verificar-problema">
+								<i class="fas fa-trash-alt fa-lg text-danger" onclick="removerTodos(<?=$lista['id']?>)"></i>
+								<i class="fas fa-edit fa-lg text-info" onclick="editarTodos(<?=$lista['id']?>,<?=$lista['valor']?>, '<?=$lista['categoria']?>', '<?=$lista['cliente']?>', '<?=$lista['endereco']?>', '<?=$lista['servico']?>','<?=$lista['descricao']?>')"></i>
+								<?php if ($lista['id_status'] == 1) {?>
+
+									<i class="fas fa-check-square fa-lg text-success" onclick="modificarTodos(<?=$lista['id']?>)"></i>
+								<?php } ?>
+								
+							</div>
+						<?php  } ?>
+
+
+
+					</div>
+
+					
+					
+
+				</div>
+			</div>
+		</div>
+
+	</body>
+	</html>

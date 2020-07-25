@@ -1,0 +1,36 @@
+
+
+/* Codigo abaixo referente a pagina home.php */
+
+ .btn-custom{
+      color: white;
+      border-radius: 500px;
+      -webkit-border-radius: 500px;
+      -moz-border-radius: 500px;
+      text-transform: uppercase;
+      transition: background 0.4s, color 0.4s;
+      padding: 10px 20px;
+     }
+.btn-verde{
+background: green;
+}
+.btn-verde:hover{
+ color: white;
+}
+
+.btn-branco{
+  border: 2px solid white;
+}
+.btn-branco:hover{
+ background-color: white;
+ color: black;
+}
+
+
+/* Codigo abaixo referente a pagina email.php */
+
+.bodyemail{
+	background-color: #e8e8e8;
+	font-family: 'Roboto', sans-serif;
+	color: #636363;
+}

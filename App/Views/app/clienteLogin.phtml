@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login - Cliente</title>
+
+  <link rel="icon" href="img/iconehead.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <style>
+    .card-login {
+      padding: 30px 0 0 0;
+      width: 350px;
+      margin: 0 auto;
+      margin-top: 130px;
+      height: 300px;
+
+    }
+    nav.navbar-transparente {
+      padding: 15px 0px;
+      background: rgba(0,0,0,10);
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+      color: white;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+      color: #9bf0e1;
+    }
+
+    .navbar-light .navbar-toggler {
+      color: rgba(255,255,255,.1);
+      border-color: white;
+    }
+
+    .divisor{
+      width: 1px;
+      background: white;
+      margin: 12px 15px;
+    }
+  </style>
+
+</head>
+<body >
+
+  <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+    <div class="container">
+      <a href="index.php" class="navbar-brand">
+        <span style="color: white; font-weight: 300; font-family: 'Roboto', sans-serif;"><img src="img/networking.svg" style="width: 50px;">Willians Solutions</span>
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+        <i class="fas fa-bars text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="nav-principal">
+       <ul class="navbar-nav ml-auto">
+         <li class="nav-item">
+           <a href="" class="nav-link">Hardware</a>
+         </li>
+         <li class="nav-item">
+           <a href="" class="nav-link">Software</a>
+         </li>
+         <li class="nav-item">
+           <a href="" class="nav-link">Rede</a>
+         </li>
+       </ul>
+     </div>
+   </div>
+
+ </nav>   
+
+  <div class="container">
+      <div class="row">
+        
+        <div class="card-login">
+          <div class="card">
+            <div class="card-header"">
+              Login
+            </div>
+
+            <div class="card-body">
+
+              <form action="/autenticarCliente" method="post">
+               <div class="form-group">
+                <input type="text" name="email" class="form-control" placeholder="digite o seu email">
+                </div>
+                 <div class="form-group">
+                <input type="password" name="senha" class="form-control" placeholder="digite sua senha">
+                </div>  
+                <a href="/inscreverse">Fazer cadastro</a>                                                                      
+                <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
+                <?php if($this->view->login == 'erro') {  ?>
+                <span class="text text-danger">"E-mail ou senha inválidos</span>  
+               <?php  }  ?>
+                        
+              </form>
+                  
+            </div>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+</body>
+</html>

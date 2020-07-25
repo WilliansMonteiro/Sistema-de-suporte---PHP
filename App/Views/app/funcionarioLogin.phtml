@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Manutenção TI</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <script src='https://www.google.com/recaptcha/api.js'></script>   
+
+     <script type="text/javascript">
+         
+     </script>
+
+     <style>
+      .card-login {
+        padding: 30px 0 0 0;
+        width: 350px;
+        margin: 0 auto;
+        margin-top: 100px;
+
+      }
+
+      body {
+      	background-color: #fafbfe;
+      }
+         nav.navbar-transparente {
+    padding: 15px 0px;
+    background: rgba(0,0,0,10);
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    color: white;
+  }
+
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: #9bf0e1;
+  }
+
+  .navbar-light .navbar-toggler {
+    color: rgba(255,255,255,.1);
+    border-color: white;
+  }
+
+  .divisor{
+    width: 1px;
+    background: white;
+    margin: 12px 15px;
+  }
+
+      
+
+    </style>
+
+</head>
+<body>
+    
+  <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+    <div class="container">
+      <a href="#" class="navbar-brand">
+        <span style="color: white; font-weight: 300; font-family: 'Roboto', sans-serif;"><img src="img/networking.svg" style="width: 50px;">Willians Solutions</span>
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+        <i class="fas fa-bars text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="nav-principal">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="/principal" class="nav-link" style="color: white;">Home</a>
+          </li>                
+        </ul>
+      </div>
+    </div>
+    
+  </nav>
+
+       <div class="container">
+    	<div class="row">
+    		
+    		<div class="card-login">
+    			<div class="card">
+    				<div class="card-header" style="background-color: #1C1C1C; color: #00FF7F; font-weight: bold;">
+    					Login
+    				</div>
+
+    				<div class="card-body">
+
+    					<form action="/autenticarFuncionario" method="POST">
+    					 <div class="form-group">
+    						<input type="text" name="email" class="form-control" placeholder="digite o seu email">
+    						</div>
+    						 <div class="form-group">
+    						<input type="password" name="senha" class="form-control" placeholder="digite sua senha">
+    						</div>            
+
+    						<button class="btn btn-lg btn-success btn-block" type="submit">Entrar</button>
+                <div style="margin-top: 10px; " class="g-recaptcha" data-sitekey="6Ldrb64UAAAAAMa6Q8aDtbo2nO-qsVmNkaBrqa2s"></div>
+                <span id="captcha" style="margin-left:100px;color:red" />
+            
+    					</form>
+    					    
+    				</div>
+
+    			</div>
+    			
+    		</div>
+
+
+
+
+    	</div>
+
+
+
+    </div>
+
+</body>
+
+</html>
